@@ -3,25 +3,36 @@
   padding: 0;
 }
 
-body {
-  box-sizing: content-box;
+body{
+  overflow-x:hidden;
 }
 
 .container {
   display: flex;
   box-sizing: border-box;
   flex-wrap: wrap;
-  width: 99.4vw;
   min-height: 30vw;
   padding-top: 2.4242vw;
-  padding-left: 4vw;
-  padding-right: 4vw;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(sources/img/banner-bg.jpg);
+  padding-left: 3vw;
+  padding-right: 3vw;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(sources/img/banner-bg.jpg);
   background-position: center center;
   background-size: cover;
   justify-content: space-around;
   align-items: baseline;
   z-index: -1;
+}
+
+.logo_menu{
+  width: 100vw;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.menu-burger__header{
+  display: none;
 }
 
 .welcome-title {
@@ -51,15 +62,21 @@ li {
   margin-right: 1.9393vw;
 }
 
-a {
+li a {
+  text-transform: uppercase;
+  text-decoration: none;
   font-family: OpenSans-Regular, sans-serif;
   color: #ffffff;
   font-size: 0.7878vw;
 }
 
+li a:hover {
+  text-decoration: underline;
+}
+
 .menu-main {
   list-style: none;
-  height: 1.9393vw;
+  /* height: 1.9393vw; */
   z-index: 1;
 }
 
@@ -878,6 +895,12 @@ textarea {
     background-size: cover;
   }
 
+  .logo_menu{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+
   h1 {
     width: 85vw;
     font-size: 5.17746vw;
@@ -889,7 +912,7 @@ textarea {
   }
 
   .menu-burger__header {
-    position: relative;
+    margin-left: 75vw;
     width: 3.1048vw;
     height: 2.7167vw;
     display: block;
